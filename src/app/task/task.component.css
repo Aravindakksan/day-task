@@ -1,0 +1,24 @@
+.split {
+    height: 100%;
+    width: 33%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  .left {
+    left: 0;
+    background-color: #111;
+  }
+  .left1 {
+    left: 33%;
+    background-color: #111;
+  }
+  
+  .left2 {
+    left: 66%;
+    background-color: red;
+  }
+  

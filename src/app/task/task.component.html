@@ -1,0 +1,42 @@
+    <ng-template #content let-modal>
+        <div class="modal-header">
+            <h4 class="modal-title" id="modal-basic-title">Add topic</h4>
+            <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('topic not saved')">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <label>Topic name</label>
+                <input type="text" [(ngModel)]="description" id="t_name" placeholder="xyz" name="dp">
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-outline-dark" (click)="addTopic()">ADD</button>
+        </div>
+    </ng-template>
+
+
+<!--DAY ADDITION PART-->
+<div class="split left">
+    <button class="btn btn-lg btn-outline-primary" (click)="addDay()">ADD DAY</button><br><br>
+    <div *ngFor="let day of days">
+        <button class="btn btn-lg btn-outline-primary" (click)="dayid(day.id)">{{day.name}}</button>
+        <hr>
+    <pre>{{ message }}</pre>
+    </div>
+</div>
+
+<!--TOPIC ADDITION PART-->
+<div class="split left1">
+    <button class="btn btn-lg btn-outline-primary" (click)="open(content)">ADD TASK</button><br><br>
+    <div *ngFor="let topic of tempTopics">
+        <button class="btn btn-lg btn-outline-primary">{{topic}}</button>
+        <hr>
+    </div>
+</div>
+
+<!--TOPIC DESCRIPTION PART-->
+<div class="split left2">
+    <button class="btn btn-lg btn-outline-primary">DESCRIPTION</button>
+    <hr>
+</div>
+    
